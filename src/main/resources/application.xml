@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springfram-ework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:documentlocation="http://www.sprin link largod de pnegre"
+       default-lazy-init="true">
+
+       <bean id="tom" class="com.esliceu.demoSpring.Person">
+        <property name="name" value="Tom"/>
+       <property name="year" value="1970"/>
+       </bean>
+<bean id="Jhon" class="com.esliceu.demoSpring.PersonFactory" factory-method="getPerson">
+<constructor-arg value="Jhon"></constructor-arg>
+<constructor-arg value="Edat"></constructor-arg>
+</bean>
+<bean id="tom" class="com.esliceu.demoSpring.Person" scope="singleton">
+<property name="name" value="Jack"/>
+<property name="year" value="1999"/>
+</bean>
+
+<bean id="tom" class="com.esliceu.demoSpring.Person" init-method="initPerson">
+<property name="name" value="Chris"/>
+<property name="year" value="1970"/>
+</bean>
+
+
+</beans>
